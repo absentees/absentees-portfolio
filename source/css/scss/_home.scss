@@ -1,0 +1,123 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,700);
+
+// COLOURS
+$white: #F2F2F2;
+$opaque-white: rgba(242,242,242,0.4);
+$light-blue: #29ABE2;
+$dark-grey: #0C0C0C;
+
+
+//MIXINS
+/// Breakpoints
+$breakpoints: (
+	'small': (min-width: 768px),
+	'medium': (min-width: 992px),
+	'large': (min-width: 1200px),
+);
+
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media #{inspect(map-get($breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+
+	@else {
+		@error 'No value found for `#{$breakpoint}`. '
+				+ 'Please make sure it is defined in `$breakpoints` map.';
+	}
+}
+
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: $light-blue;
+}
+
+.image-gradient-dynamic {
+  $image-gradient-color-top: $dark-grey;
+  $transparency-top: 0.7;
+  $image-gradient-color-bottom: $light-blue;
+  $transparency-bottom: 0;
+  $vertical-angle: 180deg;
+
+  line-height: 0;
+  position: relative;
+  width: 100%;
+
+  img {
+   height: auto;
+   left: 0;
+   position: relative;
+   top: 0;
+   width: 100%;
+  }
+
+  .copy {
+    @include transform(translate(-50%, -50%));
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    z-index: 999;
+
+    h1 {
+      color: $white;
+      font-weight: 100;
+      font-size: 28px;
+      line-height: 0.6em;
+      padding: 0.01em 1em;
+      position: relative;
+      letter-spacing: -2px;
+
+      @include respond-to(small){
+        font-size: 56px;
+      }
+    }
+
+    p{
+      color: $opaque-white;
+      font-weight: 800;
+      font-size: 13px;
+
+      @include respond-to(small){
+        font-size: 15px;
+      }
+    }
+
+    .social-list{
+      list-style-type: none;
+      font-size: 20px;
+      padding: 1em 0;
+
+      span{
+        color: $opaque-white;
+        padding: 0 0.5em;
+        @include transition(all 0.5s ease);
+
+				a{
+					text-decoration: none;
+					color: inherit;
+				}
+      }
+
+
+
+      span:hover{
+        color: $white;
+      }
+    }
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+  }
+}
