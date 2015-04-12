@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700);
 
 // COLOURS
 $white: #F2F2F2;
@@ -47,14 +47,20 @@ body{
 
   line-height: 0;
   position: relative;
-  width: 100%;
+  width: auto;
+	height: 100vh;
+	overflow:hidden;
+
 
   img {
    height: auto;
-   left: 0;
    position: relative;
-   top: 0;
-   width: 100%;
+   max-width: auto;
+	min-height: 100vh;
+	@include transform(translate(-50%, -50%));
+	left: 50%;    top: 50%;
+
+
   }
 
   .copy {
@@ -65,11 +71,16 @@ body{
     text-align: center;
     top: 50%;
     z-index: 999;
+		width: 288px;
+
+		@include respond-to(small){
+			width:600px;
+		}
 
     h1 {
       color: $white;
       font-weight: 100;
-      font-size: 28px;
+      font-size: 36px;
       line-height: 0.6em;
       padding: 0.01em 1em;
       position: relative;
@@ -80,10 +91,17 @@ body{
       }
     }
 
+		h3{
+			font-size: 15px;
+			font-weight: 800px;
+			color: $white;
+		}
+
     p{
-      color: $opaque-white;
-      font-weight: 800;
+			color: $white;
+      font-weight: 400;
       font-size: 13px;
+			line-height: 1.4em;
 
       @include respond-to(small){
         font-size: 15px;
@@ -91,6 +109,7 @@ body{
     }
 
     .social-list{
+			color: $opaque-white;
       list-style-type: none;
       font-size: 20px;
       padding: 1em 0;
@@ -119,5 +138,56 @@ body{
       transparentize($image-gradient-color-bottom, $transparency-bottom));
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
+  }
+}
+
+
+.cards {
+	width: 90%;
+	margin: auto;
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+	@include respond-to(small){
+		width: 75%;
+	}
+	color: $white;
+
+  .card {
+    @include flex-basis(20em);
+    @include flex-grow(1);
+    margin: 0.5em;
+  }
+
+  .card-image {
+    max-height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+	.card-header{
+		font-weight: 800;
+	}
+
+	.card-copy{
+		font-weight: 400;
+		color: $opaque-white;
+	}
+}
+
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  position: relative;
+
+  embed,
+  object,
+  iframe {
+    @include position(absolute, 0px null null 0px);
+    @include size(100%);
   }
 }
