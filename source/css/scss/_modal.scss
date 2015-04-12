@@ -36,7 +36,7 @@
     z-index: 99999999999;
 
     @include media($large-screen) {
-      padding-top: 10em;
+      padding-top: 5em;
     }
 
     .modal-bg {
@@ -79,19 +79,34 @@
     margin-top: 0;
     margin: auto;
     max-height: 95%;
-    overflow: auto;
-    padding: $modal-padding / 2;
+    overflow-y: hideen;
+    padding: $modal-padding / 3;
     position: relative;
     width: 95%;
+
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .embed-container iframe, .embed-container object, .embed-container embed {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+    }
 
     @include media($medium-screen) {
       max-height: 90%;
       padding: $modal-padding;
-      width: 60%;
+      width: 80%;
     }
 
     @include media($large-screen) {
-      width: 50%;
+      width: 60%;
     }
 
     h1 {
@@ -101,6 +116,25 @@
       text-align: left;
       text-transform: capitalize;
     }
+
+    .image-container{
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+
+      img{
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+
+        @include respond-to(medium){
+          margin-top:-15%;
+        }
+      }
+    }
+
 
     p {
       color: $base-font-color;

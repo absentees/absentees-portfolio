@@ -2846,7 +2846,7 @@ body {
 .image-gradient-dynamic img {
   height: auto;
   position: relative;
-  max-width: auto;
+  min-width: 100vw;
   min-height: 100vh;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -2982,11 +2982,18 @@ body {
   margin: 0.5em;
 }
 .cards .card-image {
-  max-height: 300px;
+  max-height: 200px;
   overflow: hidden;
 }
 .cards .card-image img {
+  margin-top: -30px;
   width: 100%;
+  min-height: 200px;
+}
+@media (min-width: 768px) {
+  .cards .card-image img {
+    margin-top: 0;
+  }
 }
 .cards .card-header {
   font-weight: 800;
@@ -3036,7 +3043,7 @@ body {
 }
 @media screen and (min-width: 53.75em) {
   .modal .modal-fade-screen {
-    padding-top: 10em;
+    padding-top: 5em;
   }
 }
 .modal .modal-fade-screen .modal-bg {
@@ -3093,21 +3100,35 @@ body {
   margin-top: 0;
   margin: auto;
   max-height: 95%;
-  overflow: auto;
-  padding: 1.5em;
+  overflow-y: hideen;
+  padding: 1em;
   position: relative;
   width: 95%;
+}
+.modal .modal-inner .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.modal .modal-inner .embed-container iframe, .modal .modal-inner .embed-container object, .modal .modal-inner .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 40em) {
   .modal .modal-inner {
     max-height: 90%;
     padding: 3em;
-    width: 60%;
+    width: 80%;
   }
 }
 @media screen and (min-width: 53.75em) {
   .modal .modal-inner {
-    width: 50%;
+    width: 60%;
   }
 }
 .modal .modal-inner h1 {
@@ -3116,6 +3137,23 @@ body {
   margin-bottom: 0 0 0.6em 0;
   text-align: left;
   text-transform: capitalize;
+}
+.modal .modal-inner .image-container {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+.modal .modal-inner .image-container img {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+@media (min-width: 992px) {
+  .modal .modal-inner .image-container img {
+    margin-top: -15%;
+  }
 }
 .modal .modal-inner p {
   color: #F2F2F2;
