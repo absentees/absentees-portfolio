@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Lato:100,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700);
 /* line 4, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/neat/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
@@ -2833,15 +2833,23 @@ body {
 .image-gradient-dynamic {
   line-height: 0;
   position: relative;
-  width: 100%; }
-  /* line 52, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  width: auto;
+  height: 100vh;
+  overflow: hidden; }
+  /* line 55, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
   .image-gradient-dynamic img {
     height: auto;
-    left: 0;
     position: relative;
-    top: 0;
-    width: 100%; }
-  /* line 60, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    min-width: 100vw;
+    min-height: 100vh;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%; }
+  /* line 67, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
   .image-gradient-dynamic .copy {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -2853,49 +2861,61 @@ body {
     position: absolute;
     text-align: center;
     top: 50%;
-    z-index: 999; }
-    /* line 69, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    z-index: 999;
+    width: 288px; }
+    @media (min-width: 768px) {
+      /* line 67, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+      .image-gradient-dynamic .copy {
+        width: 600px; } }
+    /* line 81, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
     .image-gradient-dynamic .copy h1 {
       color: #F2F2F2;
       font-weight: 100;
-      font-size: 28px;
+      font-size: 36px;
       line-height: 0.6em;
       padding: 0.01em 1em;
       position: relative;
       letter-spacing: -2px; }
       @media (min-width: 768px) {
-        /* line 69, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+        /* line 81, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
         .image-gradient-dynamic .copy h1 {
           font-size: 56px; } }
-    /* line 83, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    /* line 95, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    .image-gradient-dynamic .copy h3 {
+      font-size: 15px;
+      font-weight: 800px;
+      color: #F2F2F2; }
+    /* line 101, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
     .image-gradient-dynamic .copy p {
-      color: rgba(242, 242, 242, 0.4);
-      font-weight: 800;
-      font-size: 13px; }
+      color: #F2F2F2;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 1.4em; }
       @media (min-width: 768px) {
-        /* line 83, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+        /* line 101, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
         .image-gradient-dynamic .copy p {
           font-size: 15px; } }
-    /* line 93, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    /* line 112, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
     .image-gradient-dynamic .copy .social-list {
+      color: rgba(242, 242, 242, 0.4);
       list-style-type: none;
       font-size: 20px;
       padding: 1em 0; }
-      /* line 98, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+      /* line 118, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
       .image-gradient-dynamic .copy .social-list span {
         color: rgba(242, 242, 242, 0.4);
         padding: 0 0.5em;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         transition: all 0.5s ease; }
-        /* line 103, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+        /* line 123, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
         .image-gradient-dynamic .copy .social-list span a {
           text-decoration: none;
           color: inherit; }
-      /* line 111, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+      /* line 131, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
       .image-gradient-dynamic .copy .social-list span:hover {
         color: #F2F2F2; }
-  /* line 117, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  /* line 137, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
   .image-gradient-dynamic .overlay {
     background-color: rgba(12, 12, 12, 0.3);
     background-image: -webkit-linear-gradient(-450deg, rgba(12, 12, 12, 0.3), #29abe2);
@@ -2906,3 +2926,252 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px; }
+
+/* line 146, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+.cards {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  color: #F2F2F2; }
+  @media (min-width: 768px) {
+    /* line 146, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    .cards {
+      width: 75%; } }
+  /* line 157, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  .cards .card {
+    -webkit-flex-basis: 20em;
+    -moz-flex-basis: 20em;
+    flex-basis: 20em;
+    -ms-flex-preferred-size: 20em;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    margin: 0.5em; }
+  /* line 163, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  .cards .card-image {
+    max-height: 200px;
+    overflow: hidden; }
+    /* line 168, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+    .cards .card-image img {
+      margin-top: -30px;
+      width: 100%;
+      min-height: 200px; }
+      @media (min-width: 768px) {
+        /* line 168, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+        .cards .card-image img {
+          margin-top: 0; } }
+  /* line 179, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  .cards .card-header {
+    font-weight: 800; }
+  /* line 183, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  .cards .card-copy {
+    font-weight: 400;
+    color: rgba(242, 242, 242, 0.4); }
+
+/* line 189, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative; }
+  /* line 195, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_home.scss */
+  .video-wrapper embed,
+  .video-wrapper object,
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%; }
+
+/* line 20, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal label {
+  cursor: pointer; }
+/* line 24, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal .modal-state {
+  display: none; }
+/* line 28, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal .modal-fade-screen {
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.95);
+  opacity: 0;
+  padding-top: 0.6em;
+  text-align: left;
+  visibility: hidden;
+  z-index: 99999999999; }
+  @media screen and (min-width: 53.75em) {
+    /* line 28, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+    .modal .modal-fade-screen {
+      padding-top: 5em; } }
+  /* line 42, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-fade-screen .modal-bg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    cursor: pointer; }
+/* line 48, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal .modal-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+  background: rbga(0, 0, 0, 0);
+  cursor: pointer; }
+  /* line 54, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-close:after, .modal .modal-close:before {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height: 1.5em;
+    width: 0.15em;
+    background: #DDD;
+    content: '';
+    display: block;
+    margin: -3px 0 0 -1px; }
+  /* line 65, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-close:hover:after, .modal .modal-close:hover:before {
+    background: #c4c4c4; }
+  /* line 70, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-close:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+/* line 75, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal .modal-inner {
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  background: rbga(0, 0, 0, 0);
+  border-radius: 3px;
+  margin-top: 0;
+  margin: auto;
+  max-height: 95%;
+  overflow-y: hideen;
+  padding: 1em;
+  position: relative;
+  width: 95%; }
+  /* line 87, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; }
+  /* line 94, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner .embed-container iframe, .modal .modal-inner .embed-container object, .modal .modal-inner .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  @media screen and (min-width: 40em) {
+    /* line 75, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+    .modal .modal-inner {
+      max-height: 90%;
+      padding: 3em;
+      width: 80%; } }
+  @media screen and (min-width: 53.75em) {
+    /* line 75, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+    .modal .modal-inner {
+      width: 60%; } }
+  /* line 112, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner h1 {
+    color: #F2F2F2;
+    font-weight: 100;
+    margin-bottom: 0 0 0.6em 0;
+    text-align: left;
+    text-transform: capitalize; }
+  /* line 120, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner .image-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    text-align: center;
+    position: relative; }
+    /* line 127, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+    .modal .modal-inner .image-container img {
+      width: 100%;
+      height: auto;
+      margin-top: 0; }
+      @media (min-width: 992px) {
+        /* line 127, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+        .modal .modal-inner .image-container img {
+          margin-top: -15%; } }
+  /* line 139, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner p {
+    color: #F2F2F2;
+    line-height: 1.5em; }
+  /* line 144, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner .modal-intro {
+    font-weight: 800; }
+  /* line 148, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner .modal-content {
+    color: #F2F2F2; }
+    @media screen and (min-width: 40em) {
+      /* line 148, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+      .modal .modal-inner .modal-content {
+        -webkit-columns: 2 8em;
+        -moz-columns: 2 8em;
+        columns: 2 8em; } }
+  /* line 156, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+  .modal .modal-inner a.cta {
+    color: white;
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-top: 1em; }
+    /* line 162, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+    .modal .modal-inner a.cta:last-child {
+      padding: 0 2em; }
+/* line 168, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen {
+  opacity: 1;
+  visibility: visible; }
+/* line 173, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal .modal-state:checked + .modal-fade-screen .modal-inner {
+  top: 0.5em; }
+
+/* line 178, /Users/scottblissett/SkyDrive/freelance/absentees-portfolio/source/css/scss/_modal.scss */
+.modal-open {
+  overflow: hidden; }
