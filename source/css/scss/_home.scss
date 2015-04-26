@@ -105,7 +105,7 @@ body{
 			line-height: 1.4em;
 
       @include respond-to(small){
-        font-size: 15px;
+        font-size: 24px;
       }
     }
 
@@ -154,15 +154,40 @@ body{
 	}
 	color: $white;
 
+
+
   .card {
     @include flex-basis(20em);
     @include flex-grow(1);
     margin: 0.5em;
+
+		.modal-intro{
+			font-size: 12px;
+			line-height: 18px;
+
+			@include respond-to(small){
+				font-size: 18px;
+				line-height: 25px;
+			}
+		}
+
+		.modal-content{
+			font-size: 12px;
+			line-height: 18px;
+
+			@include respond-to(small){
+				font-size: 16px;
+				line-height: 22px;
+			}
+
+		}
+
   }
 
   .card-image {
     max-height: 200px;
     overflow: hidden;
+
 
 
     img {
@@ -181,8 +206,15 @@ body{
 	}
 
 	.card-copy{
+		font-size: 12px;
+		line-height: 16px;
 		font-weight: 400;
 		color: $opaque-white;
+
+		@include respond-to(small){
+			font-size: 16px;
+		}
+
 	}
 }
 

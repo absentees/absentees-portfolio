@@ -2902,7 +2902,7 @@ body {
 }
 @media (min-width: 768px) {
   .image-gradient-dynamic .copy p {
-    font-size: 15px;
+    font-size: 24px;
   }
 }
 .image-gradient-dynamic .copy .social-list {
@@ -2981,6 +2981,26 @@ body {
   -ms-flex-positive: 1;
   margin: 0.5em;
 }
+.cards .card .modal-intro {
+  font-size: 12px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .cards .card .modal-intro {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+.cards .card .modal-content {
+  font-size: 12px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .cards .card .modal-content {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .cards .card-image {
   max-height: 200px;
   overflow: hidden;
@@ -2999,8 +3019,15 @@ body {
   font-weight: 800;
 }
 .cards .card-copy {
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 400;
   color: rgba(242, 242, 242, 0.4);
+}
+@media (min-width: 768px) {
+  .cards .card-copy {
+    font-size: 16px;
+  }
 }
 
 .video-wrapper {
